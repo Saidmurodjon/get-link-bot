@@ -1,0 +1,100 @@
+Context {
+    update: {
+      update_id: 338993618,
+      message: {
+        message_id: 110,
+        from: [Object],
+        chat: [Object],
+        date: 1696931604,
+        text: '/start',
+        entities: [Array]
+      }
+    },
+    telegram: Telegram {
+      token: '6294132901:AAFCm7BvnkLLcH8eYqCcTTGRbpEc4q3mokA',
+      response: ServerResponse {
+        _events: [Object: null prototype],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        outputData: [],
+        outputSize: 0,
+        writable: true,
+        destroyed: true,
+        _last: false,
+        chunkedEncoding: false,
+        shouldKeepAlive: true,
+        maxRequestsOnConnectionReached: false,
+        _defaultKeepAlive: true,
+        useChunkedEncodingByDefault: true,
+        sendDate: true,
+        _removedConnection: false,
+        _removedContLen: false,
+        _removedTE: false,
+        strictContentLength: false,
+        _contentLength: 0,
+        _hasBody: true,
+        _trailer: '',
+        finished: true,
+        _headerSent: true,
+        _closed: true,
+        socket: null,
+        _header: 'HTTP/1.1 200 OK\r\n' +
+          'X-Powered-By: Express\r\n' +
+          'Date: Tue, 10 Oct 2023 09:53:24 GMT\r\n' +
+          'Connection: keep-alive\r\n' +
+          'Keep-Alive: timeout=5\r\n' +
+          'Content-Length: 0\r\n' +
+          '\r\n',
+        _keepAliveTimeout: 5000,
+        _onPendingData: [Function: bound updateOutgoingData],
+        req: [IncomingMessage],
+        _sent100: false,
+        _expect_continue: false,
+        _maxRequestsPerSocket: 0,
+        locals: [Object: null prototype] {},
+        statusMessage: 'OK',
+        statusCode: 200,
+        [Symbol(kCapture)]: false,
+        [Symbol(kBytesWritten)]: 0,
+        [Symbol(kNeedDrain)]: false,
+        [Symbol(corked)]: 0,
+        [Symbol(kOutHeaders)]: [Object: null prototype],
+        [Symbol(errored)]: null,
+        [Symbol(kHighWaterMark)]: 16384,
+        [Symbol(kRejectNonStandardBodyWrites)]: false,
+        [Symbol(kUniqueHeaders)]: null
+      },
+      options: {
+        apiRoot: 'https://api.telegram.org',
+        apiMode: 'bot',
+        webhookReply: true,
+        agent: [Agent],
+        attachmentAgent: undefined,
+        testEnv: false
+      }
+    },
+    botInfo: {
+      id: 6294132901,
+      is_bot: true,
+      first_name: 'GET ME LINK',
+      username: 'jk_linkbot',
+      can_join_groups: true,
+      can_read_all_group_messages: false,
+      supports_inline_queries: false
+    },
+    state: {}
+  }
+  [nodemon] restarting due to changes...
+  [nodemon] starting `node index.js`
+  Example app listening on port 8080!
+  Connected to database 
+  [nodemon] restarting due to changes...
+  [nodemon] starting `node index.js`
+  Example app listening on port 8080!
+  Connected to database 
+  {
+    id: 5583281521,
+    is_bot: false,
+    first_name: 'Saidmurod',
+    language_code: 'en'
+  }
