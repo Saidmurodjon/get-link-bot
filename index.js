@@ -7,8 +7,7 @@ const express = require("express");
 const app = express();
 bot.telegram.setMyCommands([
   { command: "/start", description: "Start bot" },
-  { command: "/about", description: "About Bot" },
-  { command: "/language", description: "choose language" },
+
 ]);
 app.use(bot.webhookCallback("/"));
 bot.telegram.setWebhook(BaseURL);
@@ -30,6 +29,7 @@ mongoose
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
 bot.start((ctx) => {
   
   Controllers.StartReferral(ctx, bot);

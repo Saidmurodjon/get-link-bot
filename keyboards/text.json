@@ -1,7 +1,29 @@
 const texts = require("../text.json");
+
+// Parse the channels from the environment variable
+const channelsToJoin = JSON.parse(process.env.CHANNELS);
+
+// Create an array to store the dynamically generated linkChannel
+const linkChannel = channelsToJoin.map((channel) => {
+  return [
+    {
+      text: channel.name,
+      url: channel.url,
+    },
+  ];
+});
+
+// Add an additional "Tekshirish" button
+linkChannel.push([
+  {
+    text: "Tekshirish",
+    callback_data: "joinCheck",
+  },
+]);
+
 module.exports = {
-  languages: new Array(
-    new Array(
+  languages: [
+    [
       {
         text: texts.uz.lan,
         callback_data: "uz",
@@ -14,10 +36,10 @@ module.exports = {
         text: texts.in.lan,
         callback_data: "in",
       }
-    )
-  ),
-  setInlineKey: new Array(
-    new Array(
+    ]
+  ],
+  setInlineKey: [
+    [
       {
         text: "yo'q",
         callback_data: "no",
@@ -26,10 +48,10 @@ module.exports = {
         text: "Ha",
         callback_data: "ok",
       }
-    )
-  ),
-  setInlineMeet: new Array(
-    new Array(
+    ]
+  ],
+  setInlineMeet: [
+    [
       {
         text: "Ortga",
         callback_data: "no",
@@ -38,16 +60,18 @@ module.exports = {
         text: "Meeting",
         url: "https://zoom.us/",
       }
-    )
-  ),
-  setInlineServiceTrue: new Array(
-    new Array({
-      text: "Tasdiqlash",
-      callback_data: "tasdiq",
-    })
-  ),
-  setOldService: new Array(
-    new Array(
+    ]
+  ],
+  setInlineServiceTrue: [
+    [
+      {
+        text: "Tasdiqlash",
+        callback_data: "tasdiq",
+      }
+    ]
+  ],
+  setOldService: [
+    [
       {
         text: "Ortga",
         callback_data: "no",
@@ -56,51 +80,23 @@ module.exports = {
         text: "Avvalgi chaqiruvlar",
         callback_data: "oldService",
       }
-    )
-  ),
-  linkChannel: new Array(
-    new Array(
-      {
-        text: "JK-IELTS",
-        url: "https://t.me/sx1020",
-      },
-     
-      
-    ),
-   new Array(
- 
-      {
-        text: "SX-GROUP",
-        url: "https://t.me/saidmurodjon_x",
-      }
-  
-      
-    ),
-    new Array(
-     
-      {
-        text: "Tekshirish",
-        callback_data: "joinCheck",
-      }
-      
-    )
-  ),
-  confirmShareLink: new Array(
-    new Array(
+    ]
+  ],
+  linkChannel,
+  confirmShareLink: [
+    [
       {
         text: "Taklif posti",
         callback_data: "confirmShareLink",
-      },
-     
-    )
-  ),
-  refLink: new Array(
-    new Array(
+      }
+    ]
+  ],
+  refLink: [
+    [
       {
         text: "Kursga qatnashish",
         url: "refLink",
-      },
-     
-    )
-  ),
+      }
+    ]
+  ],
 };
