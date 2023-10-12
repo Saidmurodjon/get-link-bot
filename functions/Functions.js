@@ -1,6 +1,6 @@
 const UserModel = require("../user/UserModel");
 const InlineKeyboards = require("../keyboards/InlineKeyboards");
-
+const data =require('../data')
 module.exports = class Functions {
   // User saqlash
 
@@ -33,7 +33,7 @@ module.exports = class Functions {
 
   // Check join channel
   static async CheckJoin(ctx) {
-    const channelsToJoin = ["@sx1020", "@saidmurodjon_x"]; // Add your desired channel names to this array
+    const channelsToJoin = data.channels // Add your desired channel names to this array
 
     const isUserAlreadyMember = async (channelName, userId) => {
       try { 
